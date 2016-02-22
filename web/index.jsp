@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: huanle0610
-  Date: 2016/2/17
-  Time: 0:02
-  To change this template use File | Settings | File Templates.
---%>
 <%
 String Title = "abc";
 %>

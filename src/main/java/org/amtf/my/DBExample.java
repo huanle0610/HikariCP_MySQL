@@ -1,16 +1,15 @@
 package org.amtf.my;
 
-import com.zaxxer.hikari.HikariConfig;
-import com.zaxxer.hikari.HikariDataSource;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.*;
-
-import  java.sql.*;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 @WebServlet(urlPatterns = "/db_example.action")
 public class DBExample extends HttpServlet {
@@ -26,17 +25,8 @@ public class DBExample extends HttpServlet {
         //设置响应内容类型
         resp.setContentType("text/html");
 
-        String hikari_properties = this.getClass().getClassLoader().getResource("hikari.properties").getFile();
-        HikariConfig config = new HikariConfig(hikari_properties);
+        Connection connection = DBConnPool.getConnection();
 
-        HikariDataSource dataSource = new HikariDataSource(config);
-
-        Connection connection = null;
-        try {
-            connection = dataSource.getConnection();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
         try  {
             Statement statement = connection.createStatement();
 
@@ -50,6 +40,10 @@ public class DBExample extends HttpServlet {
             statement.addBatch("INSERT INTO `test`.`test_table` ( `F1`, `F2`, `F3`) VALUES ( '2', '3', '6'); ");
 
             statement.executeBatch();
+
+//            statement.executeQuery("SELECT  sleep(30); ");
+
+
         } catch (SQLException e) {
             e.printStackTrace();
         }

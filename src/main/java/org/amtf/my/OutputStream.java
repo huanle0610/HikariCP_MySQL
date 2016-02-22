@@ -1,8 +1,5 @@
 package org.amtf.my;
 
-import com.zaxxer.hikari.HikariConfig;
-import com.zaxxer.hikari.HikariDataSource;
-
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
@@ -10,9 +7,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.text.SimpleDateFormat;
 
 @WebServlet(urlPatterns = "/output_stream.action")
@@ -37,7 +31,7 @@ public class OutputStream extends HttpServlet {
 
         // write dynamic data here
         try {
-            Thread.sleep(180000);
+            Thread.sleep(80000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

@@ -12,6 +12,18 @@
         <sourceRoots />
       </configuration>
     </facet>
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/Spring-Module.xml</file>
+          <file>file://$MODULE_DIR$/web/WEB-INF/spring/web-context.xml</file>
+          <file>file://$MODULE_DIR$/web/WEB-INF/spring/web-context.xml</file>
+          <file>file://$MODULE_DIR$/web/WEB-INF/spring/rest-servlet-context.xml</file>
+          <file>file://$MODULE_DIR$/web/WEB-INF/spring/services-context.xml</file>
+          <file>file://$MODULE_DIR$/web/WEB-INF/spring/services-context.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
@@ -28,5 +40,18 @@
     <orderEntry type="library" name="Maven: com.zaxxer:HikariCP:2.4.3" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.12" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.25" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.2.4.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-beans:4.2.4.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-core:4.2.4.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-web:4.2.4.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:4.2.4.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-expression:4.2.4.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context:4.2.4.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet:jstl:1.2" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.5.3" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.5.3" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.5.3" level="project" />
   </component>
 </module>
